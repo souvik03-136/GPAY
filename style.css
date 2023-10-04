@@ -1,0 +1,127 @@
+body{
+    height: 120vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;box-sizing: border-box;
+    background-color: rgba(31, 31, 31, 1);
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Product Sans';
+    color: white;
+}
+.maincontainer{
+    height: 150vh;
+    display: flex;justify-content: center;align-items: center;
+    flex-direction: column;
+}
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 00;
+    src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+  }
+.gpaytick{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-80%);
+}
+.amount{
+    font-size: 2.7rem;
+    font-weight:200;
+}
+.paidto{
+    font-size: 1.5rem;
+    transform: translateY(80%);
+}
+.upiid{
+    font-size: 1rem;
+    font-weight:lighter;
+    color: rgb(213, 213, 213);
+    transform: translateY(150%);
+}
+.rupee{
+    font-weight: 500;
+}
+.date{
+transform: translateY(550%);
+}
+.upitransactionid{
+    color: rgb(177, 177, 177);
+    transform: translateY(580%);
+}
+
+/*form*/
+.formbody{
+    height: 100vh;
+    width: 100vw;
+}
+.amountinput{
+    width: 80%;
+    height: 60px;
+    border: 3px solid rgba(26, 115, 233, 1);
+    border-radius: 40px;
+    background-color: transparent;
+    font-size: 1.2rem;
+    text-align: center;
+    color: rgba(26, 115, 233, 1);
+    font-family: 'Poppins';
+    font-weight: 600;
+    margin-top: 20px;
+}
+.amountinput::placeholder{
+    color: rgba(26, 115, 233, 1);
+}
+.mainsubmit{
+    width: 80%;
+    height: 60px;
+    background-color:rgba(26, 115, 233, 1) ;
+    color: rgba(31, 31, 31, 1);
+    font-weight: 600;
+    font-size: 1.2rem;
+    border: 3px solid transparent;
+    border-radius: 40px;
+    margin-top: 20px;
+}
+.mainsubmit:hover{
+    border:3px solid  rgba(26, 115, 233, 1);
+    background-color: transparent;
+    color: rgba(26, 115, 233, 1);
+    transition: 0.3s;
+}
+.last2buttons{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    bottom: 60px;
+    display: flex;justify-content: center;align-items: center;
+}
+.sharebutton{
+    width: 42%;
+    height: 37px;
+    border-radius: 40px;
+    border: 1px solid rgb(228, 228, 228);
+    display: flex;justify-content: center;align-items: center;
+    margin-right: 10px;
+}
+.sharess{
+    color: rgb(156, 209, 255);
+    font-size: 0.91rem;
+    font-weight: 500;
+    transform: translateX(6px);
+}
+.shareimage{
+    transform: translateX(-5px);
+}
+.donebutton{
+    width: 80px;
+    height: 37px;
+    border-radius: 40px;
+    background-color: rgb(156, 209, 255);
+    display: flex;justify-content: center;align-items: center;
+    color: rgba(31, 31, 31, 1);
+    font-weight: 400;
+}

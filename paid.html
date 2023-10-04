@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>.</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="maincontainer">
+      <div class="gpaytick">
+        <img src="gpaytick.jpg" alt="" width="100px" />
+      </div>
+      <div class="amount">
+        <span class="rupee">&#8377;</span> &nbsp;
+        <span id="mainrupee"> 20</span>.00
+      </div>
+      <div class="paidto">Paid To <span id="paidto"> Divya Lakshmi</span></div>
+      <div class="upiid" id="upiid">divyalakshmi1535-1@okaxis</div>
+
+      <div class="date" id="datetime">
+        <span id="month"></span><span id="date"></span>, 2023
+        <span id="time">7:04PM</span>
+      </div>
+      <div class="upitransactionid">
+        UPI Transaction ID: <span id="transactionid"> 326735180915</span>
+      </div>
+    </div>
+    <div class="last2buttons">
+      <div class="sharebutton">
+        <img src="sharefinal.png" alt="" width="15px" class="shareimage" />
+        <p class="sharess">Share screenshot</p>
+      </div>
+      <div class="donebutton">Done</div>
+    </div>
+
+    <script>
+      document.getElementById('mainrupee').innerText =
+        localStorage.getItem('mainamount');
+      document.getElementById('paidto').innerText =
+        localStorage.getItem('paytomain');
+      document.getElementById('upiid').innerText =
+        localStorage.getItem('upiid');
+      document.getElementById('transactionid').innerText =
+        localStorage.getItem('trnsid');
+    </script>
+
+    <script>
+      function month() {
+        // Create a Date object for the current date
+        const currentDate = new Date();
+
+        // Get the current month as a number (0-11)
+        const currentMonthNumber = currentDate.getMonth();
+
+        // Array of month names
+        const monthNames = [
+          'January',
+          'February',
+          'March',
+          'April',
+          'May',
+          'June',
+          'July',
+          'August',
+          'September',
+          'October',
+          'November',
+          'December',
+        ];
+
+        // Get the current month as a string
+        const currentMonthString = monthNames[currentMonthNumber];
+
+        const today = new Date();
+        const day = today.getDate(); // Get the current day of the month
+
+        // Get the current hours (0-23)
+        let hours = today.getHours();
+        let ampm = 'AM';
+
+        // Convert to 12-hour format and set AM/PM
+        if (hours >= 12) {
+          ampm = 'PM';
+          if (hours > 12) {
+            hours -= 12;
+          }
+        }
+
+        // Get the current minutes
+        const minutes = today.getMinutes();
+
+        // Format the time as "h:mmAM/PM"
+        const formattedTime = `${hours}:${minutes
+          .toString()
+          .padStart(2, '0')}${ampm}`;
+
+        document.getElementById('month').innerText = currentMonthString;
+        document.getElementById('date').innerText = ' ' + day;
+        document.getElementById('time').innerText = ' ' + formattedTime;
+      }
+      month();
+    </script>
+  </body>
+</html>
